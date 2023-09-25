@@ -1,12 +1,13 @@
 import React from 'react'
 
 
-const Omos = () => {
+const Ture = () => {
   return (
+
     <div>
-      <h1>om os</h1>
+      <h1>Ture</h1>
     </div>
   )
 }
 
-export default Omos
+export default Ture

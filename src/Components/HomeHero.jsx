@@ -19,7 +19,7 @@ const HomeHero = () => {
 
     useEffect(() => {
 
-        makeRequest("slider")
+        makeRequest("gallery")
 
     }, []) // lyt efter ændringer i data der slettes
 
@@ -45,7 +45,7 @@ const HomeHero = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % (data.length || 1));
     };
 
-
+ 
 
 
 
@@ -67,9 +67,9 @@ const HomeHero = () => {
                         <div className='absolute top-0 left-0 w-full h-full '>
                             <div className='relative w-full h-full'>
                                 <div className='absolute top-0 left-0 w-full h-full bg-slate-600/40'></div>
-                                <img className='object-cover w-full h-full' src={'http://localhost:5333/images/slider/' + item.image} />
+                                <img className='object-cover w-full h-full' src={'http://localhost:4444/images/gallery/' + item.image} />
                                 <div className='absolute top-0 flex flex-col items-center justify-center w-full h-full '>
-                                    <h1 className='text-3xl text-center text-white md:text-5xl'> {parser(item.caption)}</h1>
+                                    <h1 className='text-3xl text-center text-white md:text-5xl'> {parser(item.imagetext)}</h1>
                                     <div className='text-center'>
                                         <button className='mt-12'>kontakt os</button>
                                     </div>

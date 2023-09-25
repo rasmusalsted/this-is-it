@@ -9,7 +9,7 @@ const Layout = () => {
     return (
 
         <div>
-            <Topinfo/>
+            {/*           <Topinfo/> */}
             <Navbar />
 
             <main>

@@ -2,15 +2,15 @@ import React from 'react'
 
 
 
-const Faq = () => {
+const Galleri = () => {
  
   return (
     <div>
 
-      <h1>faq</h1>
+      <h1>Galleri</h1>
       
     </div>
   )
 }
 
-export default Faq
+export default Galleri

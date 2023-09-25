@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRout
 
 //PAGES
 import Home from "./Pages/Home";
-import Omos from "./Pages/Omos"
-import Service from "./Pages/Service";
-import Faq from "./Pages/Faq";
-import Nyheder from "./Pages/Nyheder";
+import Rumfærgen from "./Pages/Rumfærgen"
+import Service from "./Pages/Ture";
+import Galleri from "./Pages/Galleri";
+import Sikkerhed from "./Pages/Sikkerhed";
 import Kontakt from "./Pages/Kontakt";
 
 import NoMatch from "./Helpers/NoMatch";
@@ -31,11 +31,11 @@ function App() {
       <>
         {/* PUBLIC */}
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="Omos" element={<Omos />} />
-          <Route path="Service" element={<Service />} />
-          <Route path="Faq" element={<Faq />} />
-          <Route path="Nyheder" element={<Nyheder />} />
+          {<Route index element={<Home/>} />}
+          <Route path="Rumfærgen" element={<Rumfærgen />} />
+          <Route path="Ture" element={<Service />} />
+          <Route path="Galleri" element={<Galleri />} />
+          <Route path="Sikkerhed" element={<Sikkerhed />} />
           <Route path="Kontakt" element={<Kontakt />} />
           <Route path="*" element={<NoMatch />} />
           <Route path="Login" element={<Login />} />
@@ -43,14 +43,14 @@ function App() {
 
 
         {/* ADMIN */}
-{/*          <Route path="/admin" element={<LayoutAdmin />}>
+        {/*          <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<HomeAdmin />} />
           <Route path="NewsAdmin" element={<NewsAdmin />} />
           <Route path="CreateNews" element={<CreateNews />} />
           <Route path="AboutAdmin" element={<AboutAdmin />} />
           <Route path="CreateTestimonial" element={<CreateTestimonial />} />
           <Route path="EditNews/:newsID" element={<EditNews />} />
-        </Route>  */} 
+        </Route>  */}
       </>
 
     )
@@ -63,7 +63,7 @@ function App() {
 
     <div>
 
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
 
     </div>
   );
