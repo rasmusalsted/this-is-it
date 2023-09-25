@@ -1,6 +1,11 @@
 import React from 'react'
 // Components
-import HomeHero from '../Components/HomeHero'
+
+import HeroImageSlider from '../Components/HeroImageSlider'
+import OurTours from '../Components/OurTours'
+import AboutUs from '../Components/AboutUs'
+import OurTeam from '../Components/OurTeam'
+
 
 
 
@@ -11,7 +16,12 @@ const Home = () => {
   return (
     <div className=''>
 
-      <HomeHero />
+     {/* <HomeHero />  */}
+     <HeroImageSlider/>
+     <OurTours/>
+     <AboutUs/>
+     <OurTeam/>
+
 
 
 

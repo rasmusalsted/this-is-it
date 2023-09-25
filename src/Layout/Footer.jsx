@@ -74,7 +74,7 @@ const Footer = () => {
                                         ))
                                     }
                                 </ul>
-                                <button className='mt-8 transition duration-300 ease-in-out hover:bg-green-600'>Kontakt</button>
+                                <Link to="/Kontakt"><button className='mt-8 transition duration-300 ease-in-out hover:bg-green-600'>Kontakt</button></Link>
                             </div>
                         </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
 
             </div>
 
-            <div className='bg-[var(--dark-blue)] py-10 text-white/50'>
+            <div className='bg-[var(--dark-blue)] py-8 text-white/50'>
 
                 <div className='max-w-[1280px] px-4 m-auto text-center md:grid md:grid-cols-2'>
 

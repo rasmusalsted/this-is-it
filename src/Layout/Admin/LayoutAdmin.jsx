@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import NavbarAdmin from './NavbarAdmin'
 import FooterAdmin from './FooterAdmin.jsx'
 import { Navigate, Outlet } from 'react-router-dom'
-import Topinfo from '../Topinfo'
+
 
 
 // Få adgang til LoginContext
@@ -21,7 +21,7 @@ const LayoutAdmin = () => {
   return (
     
     <div>
-      <Topinfo/>
+
       <NavbarAdmin />
       
       <main>

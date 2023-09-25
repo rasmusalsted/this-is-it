@@ -79,28 +79,22 @@ a.active {
 }
 
 /* hero slider */
-swiper-container {
+.swiper {
   width: 100%;
-  height: 100%;
+  height: 550px;
 }
 
-swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
 
+.swiper-pagination-bullet-active, .swiper-pagination-bullet {
+  background-color: #01B3A7 !important;
+  border-radius: 0 !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin-bottom: 10px !important;
+  margin-right: 30px !important
 }
 
-swiper-slide img {
-  height: 100%;
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
+
 
 .breadcrumbs .crumb .active {
   padding: 1px;
@@ -196,3 +190,5 @@ swiper-slide img {
 article.active .panel {
   display: block;
 }
+
+

@@ -37,7 +37,7 @@ const Navbar2 = () => {
     <nav>
 
       {/* MOBILE */}
-      <div className='flex items-center justify-between w-full p-4 max-h-[56px] max-w-[1280px] m-auto '>
+      <div className='flex items-center justify-between w-full p-4 max-h-[56px] max-w-[1280px] m-auto md:hidden '>
         <div className='flex items-start '>
           <AiOutlineMenu onClick={handleNav} className='z-20 text-black cursor-pointer md:hidden' size={25} />
           <Link to="/"><img className='z-30 pt-1 pl-4 md:pl-0' src={logo} alt="Space Venture Logo" /></Link>
@@ -90,10 +90,10 @@ const Navbar2 = () => {
 
 
           <div className='flex-row hidden p-4 lg:flex'>
-            <a className='px-2' href=""><BiLogoFacebook color='white' size={25} /></a>
-            <a className='px-2' href=""><BiLogoTwitter color='white' size={25} /></a>
-            <a className='px-2' href=""><BiLogoGooglePlus color='white' size={25} /></a>
-            <a className='px-2' href=""><BiLogoInstagram color='white' size={25} /></a>
+            <a className='px-2 text-white' href=""><BiLogoFacebook size={25} /></a>
+            <a className='px-2 text-white' href=""><BiLogoTwitter size={25} /></a>
+            <a className='px-2 text-white' href=""><BiLogoGooglePlus size={25} /></a>
+            <a className='px-2 text-white' href=""><BiLogoInstagram size={25} /></a>
           </div>
 
         </div>
