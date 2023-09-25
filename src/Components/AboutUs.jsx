@@ -46,7 +46,7 @@ const AboutUs = () => {
                         <p className='py-1 my-4 text-xl  uppercase border-y-2 text-[var(--green)] border-[var(--green)]'>{data.title}</p>
                         <p className='mb-8 '>{parser(data.content)}</p>
                         <div className=''>
-                            <Link><button>Kontakt os</button></Link>
+                            <Link><button className='duration-200 border-2 hover:text-black hover:bg-transparent hover:border-2-transparent'>Kontakt os</button></Link>
                         </div>
                     </div>
                 }
