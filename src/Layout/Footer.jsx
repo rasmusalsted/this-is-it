@@ -13,6 +13,7 @@ import { FaLocationArrow } from "react-icons/fa"
 import Error from '../Helpers/Error';
 import Loading from '../Helpers/Loading';
 import useAxios from '../Helpers/useAxios';
+import NewsExit from '../Components/NewsExit';
 
 
 
@@ -58,6 +59,7 @@ const Footer = () => {
                                 <a href=""><p className='flex flex-row items-center mb-4 hover:text-[var(--green)]'><MdMail size={20} color='01B3A7' className='mr-4' /> {data?.email}</p></a>
                                 <a href=""><p className='flex flex-row items-center hover:text-[var(--green)]'><FaLocationArrow size={20} color='01B3A7' className='mr-4' /> {data?.address}</p></a>
                             </div>
+                            <NewsExit/>
                         </div>
 
                         <div className='flex flex-col'>
@@ -75,6 +77,7 @@ const Footer = () => {
                                     }
                                 </ul>
                                 <Link to="/Kontakt"><button className='mt-8 transition duration-300 ease-in-out hover:bg-green-600'>Kontakt</button></Link>
+      
                             </div>
                         </div>
 

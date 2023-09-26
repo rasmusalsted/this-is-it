@@ -33,6 +33,8 @@
     @apply px-7 py-4 bg-[var(--green)] text-white;
   }
 
+  
+
 /*   button:hover {
     @apply bg-transparent text-[var(--safety-orange-blaze-orange)] duration-200;
   }

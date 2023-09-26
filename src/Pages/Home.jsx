@@ -5,6 +5,7 @@ import HeroImageSlider from '../Components/HeroImageSlider'
 import OurTours from '../Components/OurTours'
 import AboutUs from '../Components/AboutUs'
 import OurTeam from '../Components/OurTeam'
+import Newsletter from '../Components/Newsletter'
 
 
 
@@ -21,6 +22,7 @@ const Home = () => {
      <OurTours/>
      <AboutUs/>
      <OurTeam/>
+     <Newsletter/>
 
 
 

@@ -43,7 +43,11 @@ const AboutUs = () => {
                     data &&
                     <div className='self-center text-center md:text-left'>
                         <h2 className='mb-4'>Lidt om os</h2>
-                        <p className='py-1 my-4 text-xl  uppercase border-y-2 text-[var(--green)] border-[var(--green)]'>{data.title}</p>
+                        <p className='py-1 my-4 md:my-0 text-xl  uppercase border-y-2 text-[var(--green)] border-[var(--green)] md:border-none'>{data.title}</p>
+                        <div className="relative hidden mb-4 md:block">
+                            <p className="relative z-10 border-t-2 border-[#01b3a7] w-[227px]"></p>
+                            <p className="absolute inset-0 border-t-2 border-[#F3F3F3] w-full"></p>
+                        </div>
                         <p className='mb-8 '>{parser(data.content)}</p>
                         <div className=''>
                             <Link><button className='duration-200 border-2 hover:text-black hover:bg-transparent hover:border-2-transparent'>Kontakt os</button></Link>
