@@ -1,11 +1,14 @@
 import React from 'react'
+import SafetyHero from '../Components/SafetyHero'
+import SafetyInfo from '../Components/SafetyInfo'
 
 const Nyheder = () => {
   
   return (
 
     <div>
-      <h1>Sikkerhed</h1>
+      <SafetyHero/>
+      <SafetyInfo/>
     </div>
   )
 }

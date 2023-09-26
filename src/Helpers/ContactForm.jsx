@@ -34,25 +34,27 @@ const ContactForm = () => {
 
             {error && <Error />}
             {isLoading && <Loading />}
-            {data && <h2>Tak for din Besked</h2>}
-            
-            <div>
-                <h3 className='pb-2'>Kontakt os</h3>
-                <p className='pb-2 text-gray-500 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos libero distinctio dolorum perferendis laborum sint!</p>
+            {data && <h2 className='my-4'>Tak for din Besked</h2>}
+
+            <div className='items-center md:flex'>
+                <h3 className='pb-2 pr-4 '>Kontakt</h3>
+                <p className='pb-2 text-black '>Skulle du sidde med et spørgsmål eller to, så skriv endelig til os vi vil kontakte dig hurtigst muligt</p>
             </div>
-            
 
-            <form onSubmit={handleSubmit} className='grid grid-cols-2 gap-5'>
-                <div className=''>
-                    <input required type="text" placeholder='Dit Navn' name='name' className='w-full p-2 my-2 border border-gray-300 rounded-md' />
-                    <input required type="email" placeholder='Din Email' name='email' className='w-full p-2 my-2 border border-gray-300 rounded-md' />
-                    <input required type="phone" placeholder='Telefon nr.' name='phone' className='w-full p-2 my-2 border border-gray-300 rounded-md' />
+
+            <form onSubmit={handleSubmit} className='grid grid-cols-1'>
+                <div className='flex gap-3'>
+                    <input required type="text" placeholder='Dit Navn' name='name' className='w-full p-4 my-2 rounded-sm bg-[var(--gray)] placeholder-black' />
+                    <input required type="email" placeholder='E-mail' name='email' className='w-full p-4 my-2 rounded-sm bg-[var(--gray)] placeholder-black' />
+                    <input required type="phone" placeholder='Tlf' name='phone' className='w-full p-4 my-2 rounded-sm bg-[var(--gray)] placeholder-black' />
                 </div>
                 <div className=''>
 
-                    <textarea placeholder='Din besked...' name='message' className='w-full p-2 my-2 border border-gray-300 rounded-md md:mr-5' id="" cols="30" rows="6"></textarea>
+                    <textarea placeholder='besked' name='message' className='w-full p-4 my-2 rounded-sm md:mr-5 bg-[var(--gray)] placeholder-black' id="" cols="30" rows="6"></textarea>
                 </div>
-                <div><button>send besked</button></div>
+                <div>
+                    <button className='px-[100px]'>send</button>
+                </div>
             </form>
 
         </div>

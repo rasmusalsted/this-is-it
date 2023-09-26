@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactHero from '../Components/ContactHero'
 
 
 const Kontakt = () => {
@@ -6,7 +7,7 @@ const Kontakt = () => {
 
     <div>
 
-      <h1>kontakt</h1>
+      <ContactHero/>
 
     </div>
   )

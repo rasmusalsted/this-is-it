@@ -13,14 +13,14 @@ import Loading from '../Helpers/Loading';
 import useAxios from '../Helpers/useAxios';
 
 
-const HomeHero = () => {
+const SpaceshipSliderGallery = () => {
 
     // GET data
     const { data, isLoading, error, makeRequest } = useAxios()
 
     useEffect(() => {
 
-        makeRequest("banner")
+        makeRequest("gallery")
 
     }, []) // lyt efter ændringer i data der slettes
 
@@ -49,7 +49,7 @@ const HomeHero = () => {
 
     return (
 
-        <div className='relative w-full h-[400px] md:h-[80vh]'>
+        <div className=''>
 
             {error && <Error />}
             {isLoading && <Loading />}
@@ -62,15 +62,11 @@ const HomeHero = () => {
                 data.map((item, index) => (
 
                     <div key={item._id} className={`slider-item ${index === currentIndex ? 'block' : 'hidden'}`}>
-                        <div className='absolute top-0 left-0 w-full h-full '>
-                            <div className='relative w-full h-full'>
-                                <div className='absolute top-0 left-0 w-full h-full bg-slate-600/40'></div>
-                                <img className='object-cover w-full h-full' src={'http://localhost:4444/images/banner/' + item.image} />
-                                <div className='absolute top-0 flex flex-col items-center justify-center w-full h-full '>
-                                    {<h1 className='text-3xl text-center text-white md:text-5xl'> {item.title}</h1>}
-                                </div>
-                            </div>
+
+                        <div className=''>
+                            <img className='object-cover w-full h-full' src={'http://localhost:4444/images/gallery/' + item.image} />
                         </div>
+
                     </div>
 
                 ))
@@ -78,14 +74,11 @@ const HomeHero = () => {
             }
 
             {/* SLIDER NAVIGATION */}
-            <div className='slider-controls'>
-                <BsChevronCompactLeft size={50} onClick={handlePrev} className='slider-control absolute top-[50%] -translate-x-0-[50%] translate-y-[-50%] left-5 text-2xl rounded-full group-hover:bg-black/20  text-white cursor-pointer p-2' />
+            <div className='flex justify-between mx-16 mt-5 slider-controls'>
+                <BsChevronCompactLeft size={50} onClick={handlePrev} className='p-2 text-2xl text-[var(--green)] rounded-full cursor-pointer slider-control group-hover:bg-black/20' />
 
-                <BsChevronCompactRight size={50} onClick={handleNext} className='slider-control absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full group-hover:bg-black/20  text-white cursor-pointer p-2' />
+                <BsChevronCompactRight size={50} onClick={handleNext} className='p-2 text-2xl text-[var(--green)] rounded-full cursor-pointer slider-control group-hover:bg-black/20' />
             </div>
-
-
-
 
 
         </div >
@@ -93,4 +86,4 @@ const HomeHero = () => {
     )
 }
 
-export default HomeHero
+export default SpaceshipSliderGallery

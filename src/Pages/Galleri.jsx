@@ -1,13 +1,17 @@
 import React from 'react'
+import GalleryHero from '../Components/GalleryHero'
+import LightboxGallery from '../Components/LightboxGallery'
 
 
 
 const Galleri = () => {
  
   return (
+
     <div>
 
-      <h1>Galleri</h1>
+      <GalleryHero/>
+      <LightboxGallery/>
       
     </div>
   )

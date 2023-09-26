@@ -63,7 +63,7 @@ const Footer = () => {
                         </div>
 
                         <div className='flex flex-col'>
-                            <h5 className='mb-8 text-xl text-center uppercase md:text-left'>Hurtig links</h5>
+                            <h5 className='mb-8 text-xl text-center uppercase md:text-left md:mb-0'>Hurtig links</h5>
                             <div className='m-auto text-center md:text-left'>
                                 <ul className='flex flex-wrap justify-around md:justify-normal max-w-[300px]'>
                                     {
