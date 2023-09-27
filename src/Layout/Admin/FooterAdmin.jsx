@@ -1,16 +1,32 @@
 
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
-import logo from '../../Assets/logo.png';
+
+
+// Icons
+import { BiLogoFacebook, BiLogoTwitter, BiLogoGooglePlus, BiLogoInstagram, BiDotsVerticalRounded, BiSolidPhone, BiSolidCircle } from 'react-icons/bi';
+import { MdMail } from "react-icons/md"
+import { FaLocationArrow } from "react-icons/fa"
+
 
 //Components
 import Error from '../../Helpers/Error';
 import Loading from '../../Helpers/Loading';
 import useAxios from '../../Helpers/useAxios';
+import NewsExit from '../../Components/NewsExit';
 
 
 
 const FooterAdmin = () => {
+
+    let Links = [
+        { name: "Rumfærgen", link: "/Rumfærgen" },
+        { name: "Ture", link: "/Ture" },
+        { name: "Galleri", link: "/Galleri" },
+        { name: "Sikkerhed", link: "/Sikkerhed" },
+        { name: "Kontakt", link: "/Kontakt" },
+        { name: "Admin", link: "/Admin" },
+    ];
 
 
     // Get contact info 
@@ -18,53 +34,79 @@ const FooterAdmin = () => {
 
     useEffect(() => {
 
-        makeRequest("contactinformation")
+        makeRequest("footer")
 
     }, []) // lyt efter ændringer i data der slettes
 
 
     return (
 
-        <div className='bg-[var(--onyx)] py-16 text-white'>
+        <footer>
 
-            {error && <Error />}
-            {isLoading && <Loading />}
+            <div className='bg-[var(--blue)] py-12 text-white'>
 
-            <div className='max-w-[1280px] px-4 m-auto md:grid md:grid-cols-4 md:gap-4 lg:gap-10'>
+                {error && <Error />}
+                {isLoading && <Loading />}
 
-                <div className='p-2 md:p-0'>
-                    <img className='w-[150px] pb-4' src={logo} alt="logo" />
-                    <p className='text-white/70'>Som medlem af Elinstallatørenes Landsorgination, EFLO, er vi tilsulttet et ankernævn og en garantiordning</p>
+                <div className='max-w-[1280px] px-4 m-auto'>
+
+                    <div className='justify-between md:flex-row md:flex'>
+
+                        <div className='flex flex-col mb-16'>
+                            <h5 className='mb-10 text-xl text-center uppercase md:text-left'>kontakt</h5>
+                            <div className='m-auto'>
+                                <a href=""><p className='flex flex-row items-center mb-4 hover:text-[var(--green)]'><BiSolidPhone size={20} color='01B3A7' className='mr-4' /> {data?.phone}</p></a>
+                                <a href=""><p className='flex flex-row items-center mb-4 hover:text-[var(--green)]'><MdMail size={20} color='01B3A7' className='mr-4' /> {data?.email}</p></a>
+                                <a href=""><p className='flex flex-row items-center hover:text-[var(--green)]'><FaLocationArrow size={20} color='01B3A7' className='mr-4' /> {data?.address}</p></a>
+                            </div>
+                            <NewsExit/>
+                        </div>
+
+                        <div className='flex flex-col'>
+                            <h5 className='mb-8 text-xl text-center uppercase md:text-left md:mb-0'>Hurtig links</h5>
+                            <div className='m-auto text-center md:text-left'>
+                                <ul className='flex flex-wrap justify-around md:justify-normal max-w-[300px]'>
+                                    {
+                                        Links.map((link) => (
+                                            <Link to={link.link}>
+                                                <li className='hover:text-[var(--green)]' key={link.name}>
+                                                    <p className='flex items-center pr-6'><BiSolidCircle size={15} className='pr-2' color='01B3A7' /> {link.name}</p>
+                                                </li>
+                                            </Link>
+                                        ))
+                                    }
+                                </ul>
+                                <Link to="/Kontakt"><button className='mt-8 transition duration-300 ease-in-out hover:bg-green-600'>Kontakt</button></Link>
+      
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-
-                <div className='pt-6'>
-                    <h4 className='pb-2 text-xl font-semibold'>Links</h4>
-                    <ul className='text-white/70'>
-                        <Link to='/Faq'><li className=' py-2 hover:text-[var(--safety-orange-blaze-orange)] '> &gt; FAQ</li></Link>
-                        <Link to='/Omos'><li className=' py-2 hover:text-[var(--safety-orange-blaze-orange)] '>&gt; Om os</li></Link>
-                        <Link to='/Kontakt'><li className=' py-2 hover:text-[var(--safety-orange-blaze-orange)] '>&gt; Kontakt os</li></Link>
-                        <Link to='/Service'><li className=' py-2 hover:text-[var(--safety-orange-blaze-orange)] '>&gt; Services</li></Link>
-                    </ul>
-                </div>
-
-                <div className='pt-6'>
-                    <h4 className='pb-2 text-xl font-semibold'>Kontakt os</h4>
-                    {
-                        data &&
-                        <ul className='text-white/70'>
-                            <li className='py-2 '>Adresse: {data.address}, {data.zipcity}</li>
-                            <li className='py-2 '>Telefon: {data.phone}</li>
-                            <li className='py-2 '>Email: {data.email}</li>
-                        </ul>
-                    }
-
-                </div>
-
-                <div></div>
 
             </div>
 
-        </div>
+            <div className='bg-[var(--dark-blue)] py-8 text-white/50'>
+
+                <div className='max-w-[1280px] px-4 m-auto text-center md:grid md:grid-cols-2'>
+
+                    <div className='pb-4 md:pb-0 '>
+                        <p className=''>© 2021 Space Venture. All rights reserved.</p>
+                    </div>
+
+                    <div className='flex justify-center'>
+                        <a className='px-2' href=""><BiLogoFacebook size={25} /></a>
+                        <a className='px-2' href=""><BiLogoTwitter size={25} /></a>
+                        <a className='px-2' href=""><BiLogoGooglePlus size={25} /></a>
+                        <a className='px-2' href=""><BiLogoInstagram size={25} /></a>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </footer>
 
 
     )

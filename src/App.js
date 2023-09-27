@@ -14,9 +14,9 @@ import NoMatch from "./Helpers/NoMatch";
 import HomeAdmin from "./Pages/Admin/Home/HomeAdmin";
 import LayoutAdmin from "./Layout/Admin/LayoutAdmin";
 import Layout from "./Layout/Layout";
-import NewsAdmin from "./Pages/Admin/News/NewsAdmin";
-import EditNews from "./Pages/Admin/News/EditNews";
-import CreateNews from "./Pages/Admin/News/CreateNews";
+import NewsAdmin from "./Pages/Admin/Ture/NewsAdmin";
+import EditNews from "./Pages/Admin/Ture/EditNews";
+import CreateNews from "./Pages/Admin/Ture/CreateTour";
 import AboutAdmin from "./Pages/Admin/About/AboutAdmin";
 import CreateTestimonial from "./Pages/Admin/Home/CreateTestimonial";
 import Login from "./Helpers/Login";
@@ -47,14 +47,14 @@ function App() {
 
 
         {/* ADMIN */}
-        {/*          <Route path="/admin" element={<LayoutAdmin />}>
+        <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<HomeAdmin />} />
           <Route path="NewsAdmin" element={<NewsAdmin />} />
           <Route path="CreateNews" element={<CreateNews />} />
           <Route path="AboutAdmin" element={<AboutAdmin />} />
           <Route path="CreateTestimonial" element={<CreateTestimonial />} />
           <Route path="EditNews/:newsID" element={<EditNews />} />
-        </Route>  */}
+        </Route>  
       </>
 
     )

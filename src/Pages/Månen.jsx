@@ -72,8 +72,8 @@ const Månen = () => {
                         before:transition-all
                         
                         hover:before:opacity-100 hover:after:opacity-100'
-                        data-tip="Ud af 5 stjerner!"
-                        >
+                                data-tip="Ud af 5 stjerner!"
+                            >
                                 {
                                     [...Array(data[1].rating)].map(star =>
                                         <span className='cursor-pointer '>⭐</span>

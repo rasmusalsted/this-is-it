@@ -11,7 +11,7 @@ import { AiFillEdit, AiFillStar, AiFillDelete } from 'react-icons/ai'
 
 //  axios hook
 import useAxios from '../../../Helpers/useAxios'
-import CreateNews from './CreateNews'
+import CreateNews from './CreateTour'
 
 
 
@@ -25,7 +25,7 @@ const NewsAdmin = () => {
 
   useEffect(() => {
 
-    makeRequest("news")
+    makeRequest("tours")
 
   }, [dataDelete]) // lyt efter ændringer i data der slettes
 
@@ -36,7 +36,7 @@ const NewsAdmin = () => {
 
     if (window.confirm("Er du sikker på at du vil slette nyheden?")) {
       // Kald delete funktion i axios-hook
-      makeRequestDelete("news/admin/" + newsID, null, null, "DELETE")
+      makeRequestDelete("tours/admin/" + newsID, null, null, "DELETE")
     }
 
   }
@@ -57,13 +57,13 @@ const NewsAdmin = () => {
         <table className=''>
           <thead>
             <tr>
-              <th className='pb-8'><Link to="/admin/createnews">Opret nyhed</Link></th>
+              <th className='pb-8'><Link to="/admin/createnews">Opret tur</Link></th>
               <th></th>
               <th></th>
             </tr>
 
             <tr className=''>
-              <th>Nyhed</th>
+              <th>Tur</th>
               <th>Ret</th>
               <th>Slet</th>
             </tr>
@@ -78,7 +78,7 @@ const NewsAdmin = () => {
                     <Link to={"/admin/EditNews/" + n._id}><AiFillEdit color='darkgreen' size={20} /></Link>
                   </td>
                   <td>
-                    <AiFillDelete onClick={() => { handleDelete(n._id) }} color='darkred' size={20} />
+                    <AiFillDelete className='cursor-pointer' onClick={() => { handleDelete(n._id) }} color='darkred' size={20} />
                   </td>
                 </tr>
               )
