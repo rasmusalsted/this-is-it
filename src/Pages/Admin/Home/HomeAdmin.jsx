@@ -1,13 +1,23 @@
 import React from 'react'
-import NyhedArtikel from '../../../Components/Destination'
+import AdminBg from "../../../Assets/2.jpeg"
 
 const HomeAdmin = () => {
   return (
 
-    <div className='h-[500px] text-center mt-[300px]'>
-      <h1>Admin side</h1>
-      <NyhedArtikel/>
-    </div>
+    <section>
+
+
+
+      <div className='relative w-full h-[800px]'>
+        <img className='top-0 left-0 object-cover w-full h-full ' src={AdminBg} alt="" />
+        <div className='absolute top-0 flex flex-col justify-center w-full h-full text-white'>
+          <div className='max-w-[1280px] m-auto p-4'>
+            <h1 className='uppercase text-8xl'>velkommen admin</h1>
+          </div>
+        </div>
+      </div>
+
+    </section>
   )
 }
 

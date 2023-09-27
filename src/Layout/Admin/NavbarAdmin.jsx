@@ -11,9 +11,9 @@ import logo from "../../Assets/logo.png"
 const Navbar2 = () => {
 
   let Links = [
-    { name: "Admin home", link: "/Admin" },
+    { name: "Admin", link: "/Admin" },
     { name: "Ture", link: "/Admin/NewsAdmin" },
-    { name: "Ret om os", link: "/Admin/AboutAdmin" },
+    { name: "Ret Rumfærgen", link: "/Admin/AboutAdmin" },
     { name: "Opret testimonial", link: "/Admin/CreateTestimonial" },
   ];
 

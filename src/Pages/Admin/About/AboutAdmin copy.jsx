@@ -60,7 +60,7 @@ const AboutAdmin = () => {
 
 
 
-            <h1 className='mb-8 text-center'>Ret About indholdet</h1>
+            <h1 className='mb-8 text-center'>Ret Rumfærgen siden</h1>
 
             {data &&
                 <form onSubmit={handleSubmit} className='flex flex-col border'>
@@ -70,14 +70,6 @@ const AboutAdmin = () => {
                         <label className='mr-4 font-bold'>titel:</label>
                         <input name='title' type="text" defaultValue={data.title} placeholder='Skriv om-os sidens titel' required />
                     </div>
-
-
-                    {/* teaser */}
-                    <div className='p-2 m-2 border'>
-                        <label className='mr-4 font-bold'>teaser:</label>
-                        <textarea className='w-full h-[150px]' name='teaser' defaultValue={data.teaser} placeholder='teaser tekst' required />
-                    </div>
-
 
 
                     {/* content */}
@@ -96,7 +88,7 @@ const AboutAdmin = () => {
 
 
                     <div className='p-2 m-2 text-center'>
-                        <button className='text-black ' type='submit'>ret om-os</button>
+                        <button className='text-black ' type='submit'>Gem ændringer</button>
                     </div>
 
                 </form>

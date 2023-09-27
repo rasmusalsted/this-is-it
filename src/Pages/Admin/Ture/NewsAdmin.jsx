@@ -46,48 +46,53 @@ const NewsAdmin = () => {
 
 
   return (
-    <div className='my-[150px] max-w-[1280px] px-4  mx-auto flex justify-center'>
+    
+    <section>
 
-      <div className='mx-auto'>
-        <h1 className='mb-8 text-center '>Opret/ret/slet</h1>
+      <div className='py-[150px] max-w-[1280px] px-4  mx-auto flex justify-center'>
 
-        {(error || errorDelete) && <Error />}
-        {(isLoading || isLoadingDelete) && <Loading />}
+        <div className='mx-auto'>
+          <h1 className='mb-8 text-center '>Opret/ret/slet</h1>
 
-        <table className=''>
-          <thead>
-            <tr>
-              <th className='pb-8'><Link to="/admin/createnews">Opret tur</Link></th>
-              <th></th>
-              <th></th>
-            </tr>
+          {(error || errorDelete) && <Error />}
+          {(isLoading || isLoadingDelete) && <Loading />}
 
-            <tr className=''>
-              <th>Tur</th>
-              <th>Ret</th>
-              <th>Slet</th>
-            </tr>
-          </thead>
+          <table className=''>
+            <thead>
+              <tr>
+                <th className='pb-8'><Link to="/admin/createnews">Opret tur</Link></th>
+                <th></th>
+                <th></th>
+              </tr>
 
-          <tbody>
-            {data && data.map((n) => {
-              return (
-                <tr key={n._id}>
-                  <td>{n.title}</td>
-                  <td>
-                    <Link to={"/admin/EditNews/" + n._id}><AiFillEdit color='darkgreen' size={20} /></Link>
-                  </td>
-                  <td>
-                    <AiFillDelete className='cursor-pointer' onClick={() => { handleDelete(n._id) }} color='darkred' size={20} />
-                  </td>
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
+              <tr className=''>
+                <th>Tur</th>
+                <th>Ret</th>
+                <th>Slet</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {data && data.map((n) => {
+                return (
+                  <tr key={n._id}>
+                    <td>{n.title}</td>
+                    <td>
+                      <Link to={"/admin/EditNews/" + n._id}><AiFillEdit color='darkgreen' size={20} /></Link>
+                    </td>
+                    <td>
+                      <AiFillDelete className='cursor-pointer' onClick={() => { handleDelete(n._id) }} color='darkred' size={20} />
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+
       </div>
-
-    </div>
+      
+    </section>
   )
 
 }
