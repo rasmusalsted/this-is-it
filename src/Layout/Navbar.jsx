@@ -13,7 +13,9 @@ const Navbar2 = () => {
   let Links = [
     { name: "Hjem", link: "/" },
     { name: "Rumfærgen", link: "/Rumfærgen" },
-    { name: "Ture", link: "/Ture" },
+    { name: "Ture", link: "/Ture", childs: [{ name: "Måne", link: "/" }, { name: "Mars", link: "/" }] },
+/*  { name: "Måne", link: "/Ture", parent: "Ture" },
+    { name: "Mars", link: "/Ture", parent: "Ture" }, */
     { name: "Galleri", link: "/Galleri" },
     { name: "Sikkerhed", link: "/Sikkerhed" },
     { name: "Kontakt", link: "/Kontakt" },

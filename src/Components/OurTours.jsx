@@ -17,7 +17,7 @@ const OurTours = () => {
 
                 <div className='grid grid-cols-1 gap-10 m-auto md:grid-cols-2'>
 
-                    <Link>
+                    <Link to="/Månen">
                         <div className='relative overflow-hidden cursor-pointer'>
                             <img src={Moon} alt="Moon" className='w-full h-auto transition-transform transform scale-100 duration-400 hover:scale-110' />
                             <div className='absolute text-center top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-[-50%] text-white'>
@@ -26,7 +26,7 @@ const OurTours = () => {
                         </div>
                     </Link>
 
-                    <Link>
+                    <Link to="/Mars">
                         <div className='relative overflow-hidden cursor-pointer'>
                             <img src={Mars} alt="Moon" className='w-full h-auto transition-transform transform scale-100 duration-400 hover:scale-110' />
                             <div className='absolute text-center top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-[-50%] text-white'>

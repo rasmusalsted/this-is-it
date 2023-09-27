@@ -20,6 +20,8 @@ import CreateNews from "./Pages/Admin/News/CreateNews";
 import AboutAdmin from "./Pages/Admin/About/AboutAdmin";
 import CreateTestimonial from "./Pages/Admin/Home/CreateTestimonial";
 import Login from "./Helpers/Login";
+import Månen from "./Pages/Månen";
+import Mars from "./Pages/Mars";
 
 
 
@@ -37,8 +39,10 @@ function App() {
           <Route path="Galleri" element={<Galleri />} />
           <Route path="Sikkerhed" element={<Sikkerhed />} />
           <Route path="Kontakt" element={<Kontakt />} />
-          <Route path="*" element={<NoMatch />} />
+          <Route path="Månen" element={<Månen />} />
+          <Route path="Mars" element={<Mars />} />
           <Route path="Login" element={<Login />} />
+          <Route path="*" element={<NoMatch />} />
         </Route>
 
 

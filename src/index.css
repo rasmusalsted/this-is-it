@@ -65,6 +65,10 @@ a.active {
   clip-path: polygon(61% 23%, 100% 14%, 100% 100%, 0 100%, 0 0);
 }
 
+.pricetag {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
+}
+
 /* Style the map container */
 .map-container {
   width: 100%;
