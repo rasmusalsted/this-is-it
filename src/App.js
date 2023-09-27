@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route, createBrowserRouter, createRout
 //PAGES
 import Home from "./Pages/Home";
 import Rumfærgen from "./Pages/Rumfærgen"
-import Service from "./Pages/Ture";
+import Ture from "./Pages/Ture";
 import Galleri from "./Pages/Galleri";
 import Sikkerhed from "./Pages/Sikkerhed";
 import Kontakt from "./Pages/Kontakt";
@@ -20,8 +20,7 @@ import CreateNews from "./Pages/Admin/Ture/CreateTour";
 import AboutAdmin from "./Pages/Admin/About/AboutAdmin";
 import CreateTestimonial from "./Pages/Admin/Home/CreateTestimonial";
 import Login from "./Helpers/Login";
-import Månen from "./Pages/Månen";
-import Mars from "./Pages/Mars";
+import Destination from "./Components/Destination";
 
 
 
@@ -35,12 +34,11 @@ function App() {
         <Route path="/" element={<Layout />}>
           {<Route index element={<Home/>} />}
           <Route path="Rumfærgen" element={<Rumfærgen />} />
-          <Route path="Ture" element={<Service />} />
+          <Route path="Ture" element={<Ture/>} />
+          <Route path="Ture/:newsID" element={<Destination/>} />
           <Route path="Galleri" element={<Galleri />} />
           <Route path="Sikkerhed" element={<Sikkerhed />} />
           <Route path="Kontakt" element={<Kontakt />} />
-          <Route path="Månen" element={<Månen />} />
-          <Route path="Mars" element={<Mars />} />
           <Route path="Login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>

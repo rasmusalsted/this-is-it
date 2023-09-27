@@ -63,7 +63,7 @@ const ToursSection = () => {
                                             <p className='text-[var(--green)] font-bold'>Næste afgang! - <Countdown date={item.spacelaunch} /></p>
                                         </div>
                                         <p className='my-6 text-gray-500 line-clamp-3'>{parser(item.content)}</p>
-                                        <Link to={'/' + item.destination}><button className='px-16 text-black bg-transparent border-2 border-black'>Se mere</button></Link>
+                                        <Link to={item._id}><button className='px-16 text-black bg-transparent border-2 border-black'>Se mere</button></Link>
 
                                     </div>
 
