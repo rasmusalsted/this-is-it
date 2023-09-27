@@ -23,25 +23,24 @@
 
   }
 
-  a{
-    @apply hover:text-[var(--green)]
-    transition duration-300 ease-in-out
+  a {
+    @apply hover:text-[var(--green)] transition duration-300 ease-in-out
   }
 
 
   button {
-    @apply px-7 py-4 bg-[var(--green)] text-white ;
+    @apply px-7 py-4 bg-[var(--green)] text-white;
   }
 
-  
-  
 
-/*   button:hover {
+
+
+  /*   button:hover {
     @apply bg-transparent text-[var(--safety-orange-blaze-orange)] duration-200;
   }
  */
 
- 
+
   h1 {
     @apply text-5xl font-bold;
   }
@@ -57,8 +56,8 @@
 }
 
 a.active {
-  
-  @apply  border-t-2 border-[var(--green)] bg-slate-200/20;
+
+  @apply border-t-2 border-[var(--green)] bg-slate-200/20;
 }
 
 .overlaybox {
@@ -92,7 +91,8 @@ a.active {
 }
 
 
-.swiper-pagination-bullet-active, .swiper-pagination-bullet {
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
   background-color: #01B3A7 !important;
   border-radius: 0 !important;
   width: 20px !important;
@@ -206,7 +206,7 @@ article.active .panel {
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 * {
-    font-family: Raleway;
+  font-family: Raleway;
 }
 
 .side-links {
@@ -248,3 +248,6 @@ article.active .panel {
   color: white;
   font-size: 30px;
 }
+
+/* Tooltop */
+

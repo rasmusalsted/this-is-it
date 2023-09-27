@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react';
-import { Link } from "react-router-dom";
+
 
 //Npms
 import parser from "html-react-parser"
@@ -56,14 +56,32 @@ const Månen = () => {
                         <p className=' text-black  inline-block pb-3 mb-3 text-xl font-bold border-b-4 border-[var(--green)]'>{data[1].destination}</p>
                         <p className=''>{data[1].title}</p>
                         <p className='text-[var(--green)] font-bold'>Næste afgang! - <Countdown date={data[1].spacelaunch} /></p>
-                        <div className='mt-2 mb-8'>
-                            {
-                                [...Array(data[1].rating)].map(star =>
-                                    <span>⭐</span>
-                                )
-                            }
-                        </div>
+
+                        <div>
+
+                            <div className='
+                        relative mt-2 mb-8
+                        before:content-[attr(data-tip)]
+                        before:absolute 
+                        before:px-3 before:py-2
+                        before:left-1/4 before:-top-3
+                        before:w-max before:max-w-xs
+                        before:-translate-x-1/2 before:translate-y-full
+                        before:bg-gray-700 before:text-white
+                        before:rounded-md before:opacity-0
+                        before:transition-all
                         
+                        hover:before:opacity-100 hover:after:opacity-100'
+                        data-tip="Ud af 5 stjerner!"
+                        >
+                                {
+                                    [...Array(data[1].rating)].map(star =>
+                                        <span className='cursor-pointer '>⭐</span>
+                                    )
+                                }
+                            </div>
+                        </div>
+
                         <p className='mb-8'>{parser(data[1].content)}</p>
 
 
