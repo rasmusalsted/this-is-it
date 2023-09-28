@@ -28,7 +28,7 @@ const AboutUs = () => {
 
     return (
 
-        <section className='my-16 px-4 max-w-[1280px] m-auto'>
+        <div className='my-16 px-4 max-w-[1280px] m-auto'>
 
             {error && <Error />}
             {isLoading && <Loading />}
@@ -36,7 +36,7 @@ const AboutUs = () => {
             <div className='grid gap-5 md:gap-20 md:grid-cols-2'>
 
                 <div className='self-center'>
-                    <img className='object-cover w-full h-full' src={OmOs} alt="" />
+                    <img className='object-cover w-full h-full' src={OmOs} alt="et billede af jorden set fra rummet" />
                 </div>
 
                 {
@@ -50,7 +50,7 @@ const AboutUs = () => {
                         </div>
                         <p className='mb-8 '>{parser(data.content)}</p>
                         <div className=''>
-                            <Link><button className='duration-200 border-2 hover:text-black hover:bg-transparent hover:border-2-transparent'>Kontakt os</button></Link>
+                            <Link to="/Kontakt"><button className='duration-200 border-2 hover:text-black hover:bg-transparent hover:border-2-transparent'>Kontakt os</button></Link>
                         </div>
                     </div>
                 }
@@ -58,7 +58,7 @@ const AboutUs = () => {
 
             </div>
 
-        </section>
+        </div>
 
     )
 }

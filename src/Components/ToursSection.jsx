@@ -41,7 +41,7 @@ const ToursSection = () => {
 
     return (
 
-        <section className='my-16 px-4 max-w-[1280px] m-auto'>
+        <div className='my-16 px-4 max-w-[1280px] m-auto'>
 
             {error && <Error />}
             {isLoading && <Loading />}
@@ -64,7 +64,7 @@ const ToursSection = () => {
                                 <div key={item._id} className='p-2 md:relative md:gap-16 md:p-0 md:border md:grid md:grid-cols-2 md:items-center group'>
 
                                     <div className='relative overflow-hidden md:static'>
-                                        <img className='object-cover w-full h-full max-h-[332px] transition-transform transform scale-100 duration-400 group-hover:scale-110' src={'http://localhost:4444/images/tours/' + item.image1} />
+                                        <img alt='rejsemål' className='object-cover w-full h-full max-h-[332px] transition-transform transform scale-100 duration-400 group-hover:scale-110' src={'http://localhost:4444/images/tours/' + item.image1} />
                                         <div className='absolute top-0 right-0 z-40 pricetag bg-[var(--green)] p-2 text-white'>
                                             {item.price}
                                         </div>
@@ -105,7 +105,7 @@ const ToursSection = () => {
 
 
 
-        </section>
+        </div>
 
     )
 }

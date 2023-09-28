@@ -8,12 +8,17 @@ const Galleri = () => {
  
   return (
 
-    <div>
-
+    <>
+      <header>
       <GalleryHero/>
+      </header>
+      <main>
+        <figure>
       <LightboxGallery/>
+        </figure>
+      </main>
       
-    </div>
+    </>
   )
 }
 

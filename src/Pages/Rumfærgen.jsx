@@ -10,11 +10,17 @@ const Rumfærgen = () => {
 
   return (
 
-    <div>
-      <SpaceshipHero/>
-      <WhyUs/>
-      <SpaceshipGallery/> 
-    </div>
+    <>
+      <header>
+        <SpaceshipHero />
+      </header>
+      <main>
+        <WhyUs />
+        <figure>
+          <SpaceshipGallery />
+        </figure>
+      </main>
+    </>
   )
 }
 

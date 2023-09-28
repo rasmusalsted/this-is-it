@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs"
-import { RxDotFilled } from "react-icons/rx"
+import React, { useEffect } from 'react'
+
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,12 +8,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+// import required modules 
+import { Pagination, Mousewheel } from 'swiper/modules';
+
 // Animate
 import "animate.css"
 
 
-// import required modules
-import { Pagination, Mousewheel } from 'swiper/modules';
 
 //Components
 import Error from '../Helpers/Error';
@@ -25,12 +25,6 @@ import useAxios from '../Helpers/useAxios';
 
 const HeroImageSlider = () => {
 
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + (index + 1) + '</span>';
-        },
-    };
 
     // GET data
     const { data, isLoading, error, makeRequest } = useAxios()
@@ -54,9 +48,9 @@ const HeroImageSlider = () => {
 
     return (
 
-        <div className=''>
+        <div>
 
-            <div className=''>
+            <div>
 
                 {error && <Error />}
                 {isLoading && <Loading />}
@@ -68,6 +62,7 @@ const HeroImageSlider = () => {
                             direction={'vertical'}
                             slidesPerView={1}
                             spaceBetween={0}
+                            loop={true}
                             pagination={{
                                 clickable: true,
                             }}
@@ -78,8 +73,8 @@ const HeroImageSlider = () => {
                             {data.map((item) => (
 
                                 <SwiperSlide>
-                                    <div key={item._id} className='w-full h-full'>
-                                        <img className='object-cover w-full h-full' src={'http://localhost:4444/images/banner/' + item.image} />
+                                    <header key={item._id} className='w-full h-full'>
+                                        <img className='object-cover w-full h-full' alt='månen' src={'http://localhost:4444/images/banner/' + item.image} />
                                         <div className='absolute top-0 flex flex-col justify-center w-full h-full mx-4 items-left'>
                                             <div className='md:ml-[297px]'>
                                                 <div className='max-w-[400px]'>
@@ -88,7 +83,7 @@ const HeroImageSlider = () => {
                                                 <h1 className='z-40 text-3xl font-normal text-white lg:text-7xl animate__animated animate__fadeInUp'>{newHeading(item.content)}</h1>
                                             </div>
                                         </div>
-                                    </div>
+                                    </header>
                                 </SwiperSlide>
 
                             ))}

@@ -27,7 +27,7 @@ const SafetyInfo = () => {
 
     return (
 
-        <section className='my-16 md:my-0 md:mt-16 px-4 max-w-[1280px] m-auto'>
+        <div className='my-16 md:my-0 md:mt-16 px-4 max-w-[1280px] m-auto'>
 
             {error && <Error />}
             {isLoading && <Loading />}
@@ -66,7 +66,7 @@ const SafetyInfo = () => {
 
 
 
-        </section>
+        </div>
 
     )
 }

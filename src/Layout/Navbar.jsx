@@ -41,8 +41,8 @@ const Navbar2 = () => {
 
       {/* MOBILE */}
       <div className='bg-white'>
-        <div className='flex items-center justify-between w-full p-4 max-h-[56px] max-w-[1280px] m-auto   '>
-          <div className='flex items-start '>
+        <div className='flex items-center justify-between w-full p-4 max-h-[56px] max-w-[1280px] m-auto'>
+          <div className='flex items-start'>
             <AiOutlineMenu onClick={handleNav} className='z-20 text-black cursor-pointer md:hidden' size={25} />
             <Link to="/"><img className='z-30 pt-1 pl-4 md:pl-0' src={logo} alt="Space Venture Logo" /></Link>
           </div>
@@ -50,7 +50,7 @@ const Navbar2 = () => {
           <div
             className={
               nav
-                ? 'ease-in duration-300 fixed text-black left-0 top-[56px] w-[75%] h-screen bg-white px-4 py-7 flex-col z-10'
+                ? 'ease-in duration-300 fixed text-black left-0 top-[56px] w-[75%] h-screen bg-white px-4 py-7 flex-col z-10 md:hidden'
                 : 'absolute top-[56px] h-screen left-[-100%] ease-in duration-500 z-10'
             }
           >
@@ -63,7 +63,7 @@ const Navbar2 = () => {
             <ul className='pt-8'>
               {
                 Links.map((link) => (
-                  <NavLink to={link.link}>
+                  <NavLink onClick={handleNav} to={link.link}>
                     <li key={link.name}>
                       <p className='p-4 hover:text-white hover:bg-[var(--green)]'>{link.name}</p>
                     </li>

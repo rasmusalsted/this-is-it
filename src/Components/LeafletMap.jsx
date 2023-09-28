@@ -24,7 +24,7 @@ const LeafletMap = ({coord = [56,10], popupinfo = "Find os her "}) => {
 
 
     return (
-        <div className=''>
+        <div className='z-10'>
 
             <MapContainer center={coord} zoom={10} style={{ width: "100%", height: "400px" }} >
                 <TileLayer

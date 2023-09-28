@@ -16,15 +16,22 @@ import Newsletter from '../Components/Newsletter'
 
 const Home = () => {
   return (
-    <div className=''>
 
-     <HeroImageSlider/>
-     <OurTours/>
-     <AboutUs/>
-     <OurTeam/>
-     <Newsletter/>
- 
-    </div>
+    <>
+    
+      <header>
+        <HeroImageSlider />
+      </header>
+      <main>
+        <OurTours />
+        <article>
+          <AboutUs />
+        </article>
+        <OurTeam />
+        <Newsletter />
+      </main>
+
+    </>
   )
 }
 

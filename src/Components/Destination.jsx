@@ -25,7 +25,7 @@ const Destination = () => {
 
         makeRequest("tours/" + tureID)
 
-    }, []) // lyt efter ændringer i data der slettes
+    }, [tureID]) // lyt efter ændringer i data der slettes
 
 
 

@@ -27,7 +27,7 @@ const WhyUs = () => {
 
     return (
 
-        <section className='my-16 px-4 max-w-[1280px] m-auto'>
+        <div className='my-16 px-4 max-w-[1280px] m-auto'>
 
             {error && <Error />}
             {isLoading && <Loading />}
@@ -45,7 +45,7 @@ const WhyUs = () => {
                         <div className='grid gap-5 md:gap-5 lg:gap-20 md:grid-cols-2'>
 
                             <div className='self-center'>
-                                <img className='object-cover w-full h-full' src={'http://localhost:4444/images/spacecraft/' + data.image} />
+                                <img className='object-cover w-full h-full' alt='jorden set fra rummet' src={'http://localhost:4444/images/spacecraft/' + data.image} />
                             </div>
 
                             <div className='self-center text-center md:text-left'>
@@ -65,8 +65,7 @@ const WhyUs = () => {
             }
 
 
-
-        </section>
+        </div>
 
     )
 }

@@ -8,7 +8,7 @@ const SpaceshipHero = () => {
 
     return (
 
-        <section>
+        <div>
 
             <div className='relative w-full h-[400px] overflow-hidden'>
                 <img className='top-0 left-0 object-cover w-full h-full animate__heartBeat animate__animated' src={Space} alt="outerspace" />
@@ -20,7 +20,7 @@ const SpaceshipHero = () => {
             </div>
 
 
-        </section>
+        </div>
 
     )
 }

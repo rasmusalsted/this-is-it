@@ -61,7 +61,7 @@ const LightboxGallery = () => {
     }
 
     return (
-        <section className='bg-[var(--gray)]'>
+        <div className='bg-[var(--gray)]'>
 
             <div className='max-w-[1400px] md:h-[800px] h-[580px] w-full m-auto py-16 px-4 relative group'>
                 <div className='w-full h-full duration-500 bg-center bg-cover rounded-2xl'
@@ -87,7 +87,7 @@ const LightboxGallery = () => {
                 </div>
             </div>
             
-        </section>
+        </div>
     )
 }
 

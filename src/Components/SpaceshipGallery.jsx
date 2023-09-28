@@ -1,14 +1,11 @@
 import React from 'react'
 import { useEffect } from 'react';
-import parser from "html-react-parser"
+
 
 //Components
 import Error from '../Helpers/Error';
 import Loading from '../Helpers/Loading';
 import useAxios from '../Helpers/useAxios';
-
-//Assets
-import Space from "../Assets/banner-spaceship.jpg"
 import SpaceshipSliderGallery from './SpaceshipSliderGallery';
 
 
@@ -28,7 +25,7 @@ const SpaceshipGallery = () => {
 
     return (
 
-        <section className='mb-16'>
+        <div className='mb-16'>
 
             {error && <Error />}
             {isLoading && <Loading />}
@@ -51,7 +48,7 @@ const SpaceshipGallery = () => {
                             {data.map((item) => (
 
                                 <div key={item._id} className='grid'>
-                                    <img className='object-cover w-full h-full' src={'http://localhost:4444/images/gallery/' + item.image} />
+                                    <img className='object-cover w-full h-full' alt={item.imagetext} src={'http://localhost:4444/images/gallery/' + item.image} />
 
                                 </div>
 
@@ -67,7 +64,7 @@ const SpaceshipGallery = () => {
                 <SpaceshipSliderGallery />
             </div>
 
-        </section>
+        </div>
 
     )
 }

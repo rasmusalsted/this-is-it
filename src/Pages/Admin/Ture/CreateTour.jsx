@@ -61,7 +61,7 @@ const CreateTour = () => {
         <input name='price' type="text" placeholder='price' required className='p-2 m-2 border' />
 
         {/* spacelaunch */}
-        <input name='spacelaunch' type="text" placeholder='spacelaunch' required className='p-2 m-2 border' />
+        <input name='spacelaunch' type="date" placeholder='spacelaunch' required className='p-2 m-2 border' />
 
         {/* image1 */}
         <input name='image1' type="file" required className='p-2 m-2 border' />

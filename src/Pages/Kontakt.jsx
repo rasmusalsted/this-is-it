@@ -5,11 +5,12 @@ import ContactHero from '../Components/ContactHero'
 const Kontakt = () => {
   return (
 
-    <div>
-
+    <>
+      <header>
       <ContactHero/>
+      </header>
 
-    </div>
+    </>
   )
 }
 

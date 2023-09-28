@@ -12,7 +12,7 @@ const OurTours = () => {
     
     return (
 
-        <section className='bg-[var(--gray)]'>
+        <div className='bg-[var(--gray)]'>
 
             <div className='flex m-auto py-16 max-w-[1280px] mt-[-110px] relative z-40'>
 
@@ -42,10 +42,10 @@ const OurTours = () => {
             </div>
 
             <div className='pb-16 text-center'>
-                <Link><p>Vores ture →</p></Link>
+                <Link to="/Ture"><p>Vores ture →</p></Link>
             </div>
 
-        </section>
+        </div>
     )
 }
 

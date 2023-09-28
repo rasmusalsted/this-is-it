@@ -38,7 +38,7 @@ const ContactHero = ({ coord }) => {
                     <div className='grid gap-5'>
 
 
-                        <div>
+                        <div className='z-0'>
                             <LeafletMap coord={[56, 10]} popupinfo={"Du kan finde os her: <br> " + data?.address + " " + data?.zipcity} />
                         </div>
                         

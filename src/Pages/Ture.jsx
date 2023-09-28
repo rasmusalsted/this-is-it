@@ -6,11 +6,16 @@ import ToursSection from '../Components/ToursSection'
 const Ture = () => {
   return (
 
-    <div>
-
-      <ToursHero/>
-      <ToursSection/>
-    </div>
+    <>
+      <header>
+        <ToursHero />
+      </header>
+      <main>
+        <article>
+          <ToursSection />
+        </article>
+      </main>
+    </>
   )
 }
 

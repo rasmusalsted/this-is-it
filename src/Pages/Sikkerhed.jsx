@@ -3,13 +3,19 @@ import SafetyHero from '../Components/SafetyHero'
 import SafetyInfo from '../Components/SafetyInfo'
 
 const Nyheder = () => {
-  
+
   return (
 
-    <div>
-      <SafetyHero/>
-      <SafetyInfo/>
-    </div>
+    <>
+      <header>
+        <SafetyHero />
+      </header>
+      <main>
+        <section>
+          <SafetyInfo />
+        </section>
+      </main>
+    </>
   )
 }
 
