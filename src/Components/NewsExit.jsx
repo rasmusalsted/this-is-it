@@ -31,7 +31,7 @@ const NewsExit = () => {
 
                 {error && <Error />}
                 {isLoading && <Loading />}
-                {data && <p>Du er nu afmeldt</p>}
+                {data && <p className='pt-4'>Du er nu afmeldt</p>}
 
                 <div>
 

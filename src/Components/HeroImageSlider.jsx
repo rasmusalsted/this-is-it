@@ -9,6 +9,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
+// Animate
+import "animate.css"
+
 
 // import required modules
 import { Pagination, Mousewheel } from 'swiper/modules';
@@ -79,8 +82,8 @@ const HeroImageSlider = () => {
                                         <img className='object-cover w-full h-full' src={'http://localhost:4444/images/banner/' + item.image} />
                                         <div className='absolute top-0 flex flex-col justify-center w-full h-full mx-4 items-left'>
                                             <div className='md:ml-[297px]'>
-                                                <p className='z-50 pb-4 text-white uppercase'>{item.title}</p>
-                                                <h1 className='z-50 text-3xl font-normal text-white lg:text-5xl'>{newHeading(item.content)}</h1>
+                                                <p className='z-50 pb-4 text-white uppercase animate__animated animate__fadeInLeft'>{item.title}</p>
+                                                <h1 className='z-50 text-3xl font-normal text-white lg:text-7xl animate__animated animate__fadeInUp'>{newHeading(item.content)}</h1>
                                             </div>
                                         </div>
                                     </div>

@@ -13,7 +13,7 @@ const OurTours = () => {
 
         <section className='bg-[var(--gray)]'>
 
-            <div className='flex m-auto py-16 max-w-[1280px] md:mt-[-90px] relative z-50'>
+            <div className='flex m-auto py-16 max-w-[1280px] mt-[-110px] relative z-50'>
 
                 <div className='grid grid-cols-1 gap-10 m-auto md:grid-cols-2'>
 
@@ -41,7 +41,7 @@ const OurTours = () => {
             </div>
 
             <div className='pb-16 text-center'>
-                <Link><p>Vores ture</p></Link>
+                <Link><p>Vores ture →</p></Link>
             </div>
 
         </section>

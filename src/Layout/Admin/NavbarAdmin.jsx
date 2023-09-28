@@ -12,9 +12,10 @@ const Navbar2 = () => {
 
   let Links = [
     { name: "Admin", link: "/Admin" },
-    { name: "Ture", link: "/Admin/NewsAdmin" },
+    { name: "Ture", link: "/Admin/TureAdmin" },
     { name: "Ret Rumfærgen", link: "/Admin/AboutAdmin" },
-    { name: "Opret testimonial", link: "/Admin/CreateTestimonial" },
+    { name: "Henvendelser", link: "/Admin/Henvendelser" },
+    { name: "Nyhedsbrev", link: "/Admin/Nyhedsbrev" },
   ];
 
 

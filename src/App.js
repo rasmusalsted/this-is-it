@@ -14,13 +14,16 @@ import NoMatch from "./Helpers/NoMatch";
 import HomeAdmin from "./Pages/Admin/Home/HomeAdmin";
 import LayoutAdmin from "./Layout/Admin/LayoutAdmin";
 import Layout from "./Layout/Layout";
-import NewsAdmin from "./Pages/Admin/Ture/NewsAdmin";
-import EditNews from "./Pages/Admin/Ture/EditNews";
-import CreateNews from "./Pages/Admin/Ture/CreateTour";
-import AboutAdmin from "./Pages/Admin/About/AboutAdmin";
-import CreateTestimonial from "./Pages/Admin/Home/CreateTestimonial";
+import TureAdmin from "./Pages/Admin/Ture/TureAdmin";
+import EditTour from "./Pages/Admin/Ture/EditTour";
+import CreateTour from "./Pages/Admin/Ture/CreateTour";
+import AboutAdmin from "./Pages/Admin/Rumfærgen/AboutAdmin";
+import Henvendelser from "./Pages/Admin/Home/Henvendelser";
 import Login from "./Helpers/Login";
 import Destination from "./Components/Destination";
+import Månen from "./Pages/Månen";
+import Mars from "./Pages/Mars";
+import Nyhedsbrev from "./Pages/Admin/Nyhedsbrev/Nyhedsbrev";
 
 
 
@@ -35,10 +38,12 @@ function App() {
           {<Route index element={<Home/>} />}
           <Route path="Rumfærgen" element={<Rumfærgen />} />
           <Route path="Ture" element={<Ture/>} />
-          <Route path="Ture/:newsID" element={<Destination/>} />
+          <Route path="Ture/:tureID" element={<Destination/>} />
           <Route path="Galleri" element={<Galleri />} />
           <Route path="Sikkerhed" element={<Sikkerhed />} />
           <Route path="Kontakt" element={<Kontakt />} />
+          <Route path="Månen" element={<Månen />} />
+          <Route path="Mars" element={<Mars />} />
           <Route path="Login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
@@ -47,11 +52,12 @@ function App() {
         {/* ADMIN */}
         <Route path="/admin" element={<LayoutAdmin />}>
           <Route index element={<HomeAdmin />} />
-          <Route path="NewsAdmin" element={<NewsAdmin />} />
-          <Route path="CreateNews" element={<CreateNews />} />
+          <Route path="TureAdmin" element={<TureAdmin />} />
+          <Route path="CreateTour" element={<CreateTour />} />
           <Route path="AboutAdmin" element={<AboutAdmin />} />
-          <Route path="CreateTestimonial" element={<CreateTestimonial />} />
-          <Route path="EditNews/:newsID" element={<EditNews />} />
+          <Route path="Henvendelser" element={<Henvendelser />} />
+          <Route path="Nyhedsbrev" element={<Nyhedsbrev />} />
+          <Route path="EditTour/:tureID" element={<EditTour />} />
         </Route>  
       </>
 

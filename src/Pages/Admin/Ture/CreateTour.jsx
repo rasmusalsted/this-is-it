@@ -6,7 +6,7 @@ import Loading from '../../../Helpers/Loading'
 import Error from '../../../Helpers/Error'
 
 
-const CreateNews = () => {
+const CreateTour = () => {
 
   // POST nyhed - opret en nyhed
   const { data, isLoading, error, makeRequest } = useAxios()
@@ -79,4 +79,4 @@ const CreateNews = () => {
   )
 }
 
-export default CreateNews
+export default CreateTour

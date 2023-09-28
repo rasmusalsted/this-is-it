@@ -16,14 +16,14 @@ import Countdown from 'react-countdown';
 
 const Destination = () => {
 
-    const { newsID } = useParams();
+    const { tureID } = useParams();
 
     // GET tur
     const { data, isLoading, error, makeRequest } = useAxios()
 
     useEffect(() => {
 
-        makeRequest("tours/" + newsID)
+        makeRequest("tours/" + tureID)
 
     }, []) // lyt efter ændringer i data der slettes
 
@@ -43,8 +43,8 @@ const Destination = () => {
 
 
                     <div className='flex flex-col gap-8 '>
-                        <img className='object-cover w-full h-full' src={'http://localhost:4444/images/tours/' + data.image1} />
-                        <img className='object-cover w-full h-full' src={'http://localhost:4444/images/tours/' + data.image2} />
+                        <img className='object-cover w-full h-full max-h-[332px]' src={'http://localhost:4444/images/tours/' + data.image1} />
+                        <img className='object-cover w-full h-full max-h-[332px]' src={'http://localhost:4444/images/tours/' + data.image2} />
                     </div>
 
                     <div className='text-center text-gray-500 md:text-left md:max-w-[80%] relative'>

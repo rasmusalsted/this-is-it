@@ -249,5 +249,9 @@ article.active .panel {
   font-size: 30px;
 }
 
-/* Tooltop */
+/* Hero img animation */
+
+.animate__animated.animate__heartBeat  {
+  --animate-duration: 90s;
+}
 

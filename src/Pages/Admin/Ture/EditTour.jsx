@@ -7,11 +7,11 @@ import Loading from '../../../Helpers/Loading'
 import Error from '../../../Helpers/Error'
 
 
-const EditNews = () => {
+const EditTour = () => {
 
   // Snup ID'en fra url'ens parameter
-  const { newsID } = useParams();
-  console.log(newsID)
+  const { tureID } = useParams();
+  console.log(tureID)
 
   // GET nyhed - opret en nyhed
   const { data, isLoading, error, makeRequest } = useAxios()
@@ -24,7 +24,7 @@ const EditNews = () => {
   useEffect(() => {
 
     // Hent data for den nyhed som har den ID som er i url'en
-    makeRequest("tours/" + newsID)
+    makeRequest("tours/" + tureID)
 
   }, [])
 
@@ -35,12 +35,12 @@ const EditNews = () => {
     // lav et formdataobjekt af indholdet fra formularen (e.target)
     let fd = new FormData(e.target)
 
-    makeRequestEdit("tours/admin/" + newsID, null, null, "PUT", fd)
+    makeRequestEdit("tours/admin/" + tureID, null, null, "PUT", fd)
 
     console.log("formular afsendt")
 
     // navigate tilbage til admin siden
-    navigate("/Admin/NewsAdmin")
+    navigate("/Admin/TureAdmin")
 
 
   }
@@ -106,14 +106,14 @@ const EditNews = () => {
             <div className='p-2 m-2 border'>
               <label className='mr-4 font-bold'>Nuværende billede:</label>
               <img className='pb-4' src={"http://localhost:4444/images/tours/" + data.image1} width="200"></img>
-              <input name='image' type="file" />
+              <input name='image1' type="file" />
             </div>
 
             {/* image2 */}
             <div className='p-2 m-2 border'>
               <label className='mr-4 font-bold'>Nuværende billede:</label>
               <img className='pb-4' src={"http://localhost:4444/images/tours/" + data.image1} width="200"></img>
-              <input name='image' type="file" />
+              <input name='image2' type="file" />
             </div>
 
 
@@ -129,4 +129,4 @@ const EditNews = () => {
   )
 }
 
-export default EditNews
+export default EditTour

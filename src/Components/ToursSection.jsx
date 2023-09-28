@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Link } from "react-router-dom";
 
 //Npms
@@ -23,6 +23,19 @@ const ToursSection = () => {
 
     }, []) // lyt efter ændringer i data der slettes
 
+      // Function der sorter turene så næste afgang er først
+      const sortDataByLatestTour = (data) => {
+        if (data && data.length > 0) {
+            return data.slice().sort((b, a) => new Date(b.spacelaunch) - new Date(a.spacelaunch));
+        }
+        // returner orginal data hvis det ikke er muligt
+        return data;
+    };
+
+    // useMemo til at sorter data array når det er klar
+    const sortedData = useMemo(() => sortDataByLatestTour(data), [data]);
+
+
 
 
 
@@ -34,24 +47,24 @@ const ToursSection = () => {
             {isLoading && <Loading />}
 
             {
-                data &&
+                sortedData &&
 
                 <div>
                     {error && <Error />}
                     {isLoading && <Loading />}
 
                     {
-                        data &&
+                        sortedData &&
 
                         <div className='grid gap-10 md:grid-rows-2'>
 
-                            {data.map((item) => (
+                            {sortedData.map((item) => (
 
 
                                 <div key={item._id} className='p-2 md:relative md:gap-16 md:p-0 md:border md:grid md:grid-cols-2 md:items-center'>
 
                                     <div className='relative md:static'>
-                                        <img className='object-cover w-full h-full' src={'http://localhost:4444/images/tours/' + item.image1} />
+                                        <img className='object-cover w-full h-full max-h-[332px]' src={'http://localhost:4444/images/tours/' + item.image1} />
                                         <div className='absolute top-0 right-0 z-50 pricetag bg-[var(--green)] p-2 text-white'>
                                             {item.price}
                                         </div>

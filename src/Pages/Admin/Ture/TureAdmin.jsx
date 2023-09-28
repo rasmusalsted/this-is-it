@@ -11,16 +11,16 @@ import { AiFillEdit, AiFillStar, AiFillDelete } from 'react-icons/ai'
 
 //  axios hook
 import useAxios from '../../../Helpers/useAxios'
-import CreateNews from './CreateTour'
+import CreateTour from './CreateTour'
 
 
 
-const NewsAdmin = () => {
+const TureAdmin = () => {
 
-  // GET nyheder - forud for ret og slet
+  // GET ture - forud for ret og slet
   const { data, isLoading, error, makeRequest } = useAxios()
 
-  // DELETE nyhed - for at en nyhed kan slettes
+  // DELETE tur - for at en tur kan slettes
   const { data: dataDelete, isLoading: isLoadingDelete, error: errorDelete, makeRequest: makeRequestDelete } = useAxios()
 
   useEffect(() => {
@@ -29,20 +29,17 @@ const NewsAdmin = () => {
 
   }, [dataDelete]) // lyt efter ændringer i data der slettes
 
-  // håndter slet nyhed
-  const handleDelete = (newsID) => {
-    console.log(newsID)
+  // håndter slet tur
+  const handleDelete = (tureID) => {
+    console.log(tureID)
 
 
-    if (window.confirm("Er du sikker på at du vil slette nyheden?")) {
+    if (window.confirm("Er du sikker på at du vil slette turen?")) {
       // Kald delete funktion i axios-hook
-      makeRequestDelete("tours/admin/" + newsID, null, null, "DELETE")
+      makeRequestDelete("tours/admin/" + tureID, null, null, "DELETE")
     }
 
   }
-
-
-
 
 
   return (
@@ -60,7 +57,7 @@ const NewsAdmin = () => {
           <table className=''>
             <thead>
               <tr>
-                <th className='pb-8'><Link to="/admin/createnews">Opret tur</Link></th>
+                <th className='pb-8'><Link to="/admin/CreateTour">Opret tur</Link></th>
                 <th></th>
                 <th></th>
               </tr>
@@ -78,7 +75,7 @@ const NewsAdmin = () => {
                   <tr key={n._id}>
                     <td>{n.title}</td>
                     <td>
-                      <Link to={"/admin/EditNews/" + n._id}><AiFillEdit color='darkgreen' size={20} /></Link>
+                      <Link to={"/admin/EditTour/" + n._id}><AiFillEdit color='darkgreen' size={20} /></Link>
                     </td>
                     <td>
                       <AiFillDelete className='cursor-pointer' onClick={() => { handleDelete(n._id) }} color='darkred' size={20} />
@@ -97,4 +94,4 @@ const NewsAdmin = () => {
 
 }
 
-export default NewsAdmin
+export default TureAdmin
