@@ -13,20 +13,17 @@ import Newsletter from '../Components/Newsletter'
 
 
 
+
 const Home = () => {
   return (
     <div className=''>
 
-     {/* <HomeHero />  */}
      <HeroImageSlider/>
      <OurTours/>
      <AboutUs/>
      <OurTeam/>
      <Newsletter/>
-
-
-
-
+ 
     </div>
   )
 }

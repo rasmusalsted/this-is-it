@@ -7,7 +7,6 @@ import { BiLogoFacebook, BiLogoTwitter, BiLogoGooglePlus, BiLogoInstagram, BiDot
 
 // Assets
 import logo from "../Assets/logo.png"
-import TureLinks from '../Components/TureLinks';
 
 const Navbar2 = () => {
 
@@ -82,22 +81,15 @@ const Navbar2 = () => {
 
 
           <ul className='flex flex-row text-white'>
-            <NavLink to="/"><li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Hjem</li></NavLink>
-            <NavLink to="/Rumfærgen"><li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Rumfærgen</li></NavLink>
-
-            <div className='relative group'>
-              <NavLink to="/Ture">
-                <li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Ture</li>
-              </NavLink>
-              <div className='absolute z-50 hidden p-4 text-black bg-white group-hover:block'>
-                <TureLinks />
-              </div>
-            </div>
-
-            <NavLink to="/Galleri"><li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Galleri</li></NavLink>
-            <NavLink to="/Sikkerhed"><li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Sikkerhed</li></NavLink>
-            <NavLink to="/Kontakt"><li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Kontakt</li></NavLink>
-            <NavLink to="/Admin"><li className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>Admin</li></NavLink>
+            {
+              Links.map((link) => (
+                <NavLink to={link.link}>
+                  <li key={link.name}>
+                    <p className='p-4 hover:border-t-2 border-[var(--green)] hover:bg-slate-200/20'>{link.name}</p>
+                  </li>
+                </NavLink>
+              ))
+            }
           </ul>
 
 

@@ -47,7 +47,7 @@ const SafetyInfo = () => {
                             <div className='self-center'>
                                 <img className='' src={Astronaut} />
                                 <div className='hidden md:flex overlaybox absolute bottom-[-50%] w-[40%] h-[40%] bg-[var(--green)] z-10 group-hover:bottom-0 ease-in-out duration-500  items-end justify-center'>
-                                    <h5 className='p-8'>"Sikkerhed i rummet: Når du kun har en tynd dragt mellem dig og det kolde, barske rum, begynder du at værdsætte din sikkerhedssnor mere end din yndlings-pizza! 🍕🌌🚀"</h5>
+                                    <h5 className='p-8 text-xl'>"Sikkerhed i rummet: Når du kun har en tynd dragt mellem dig og det kolde, barske rum, begynder du at værdsætte din sikkerhedssnor mere end din yndlings-pizza! 🍕🌌🚀"</h5>
                                 </div>
 
                             </div>

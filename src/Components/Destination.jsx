@@ -100,7 +100,7 @@ const Destination = () => {
                             <a className='px-2' href=""><BiLogoInstagram size={25} /></a>
                         </div>
 
-                        <div className='absolute top-0 right-0 z-50 pricetag bg-[var(--green)] p-2 text-white'>
+                        <div className='absolute top-0 right-0 z-40 pricetag bg-[var(--green)] p-2 text-white'>
                             {data.price}
                         </div>
                     </div>

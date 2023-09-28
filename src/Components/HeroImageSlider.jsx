@@ -41,7 +41,7 @@ const HeroImageSlider = () => {
 
     }, []) // lyt efter ændringer i data der slettes
 
-    
+
     // Span i heading
     const newHeading = (str) => {
         const words = str.split(' ');
@@ -49,7 +49,7 @@ const HeroImageSlider = () => {
         const remainingText = words.join(' ');
         const resultTxt = <>{remainingText} <span className='font-bold'>{lastWord}</span></>
         return resultTxt;
-    } 
+    }
 
 
     return (
@@ -82,8 +82,10 @@ const HeroImageSlider = () => {
                                         <img className='object-cover w-full h-full' src={'http://localhost:4444/images/banner/' + item.image} />
                                         <div className='absolute top-0 flex flex-col justify-center w-full h-full mx-4 items-left'>
                                             <div className='md:ml-[297px]'>
-                                                <p className='z-50 pb-4 text-white uppercase animate__animated animate__fadeInLeft'>{item.title}</p>
-                                                <h1 className='z-50 text-3xl font-normal text-white lg:text-7xl animate__animated animate__fadeInUp'>{newHeading(item.content)}</h1>
+                                                <div className='max-w-[400px]'>
+                                                    <p className='z-40 pb-4 text-white uppercase animate__animated animate__fadeInRight'>{item.title}</p>
+                                                </div>
+                                                <h1 className='z-40 text-3xl font-normal text-white lg:text-7xl animate__animated animate__fadeInUp'>{newHeading(item.content)}</h1>
                                             </div>
                                         </div>
                                     </div>

@@ -21,8 +21,6 @@ import AboutAdmin from "./Pages/Admin/Rumfærgen/AboutAdmin";
 import Henvendelser from "./Pages/Admin/Home/Henvendelser";
 import Login from "./Helpers/Login";
 import Destination from "./Components/Destination";
-import Månen from "./Pages/Månen";
-import Mars from "./Pages/Mars";
 import Nyhedsbrev from "./Pages/Admin/Nyhedsbrev/Nyhedsbrev";
 
 
@@ -42,8 +40,6 @@ function App() {
           <Route path="Galleri" element={<Galleri />} />
           <Route path="Sikkerhed" element={<Sikkerhed />} />
           <Route path="Kontakt" element={<Kontakt />} />
-          <Route path="Månen" element={<Månen />} />
-          <Route path="Mars" element={<Mars />} />
           <Route path="Login" element={<Login />} />
           <Route path="*" element={<NoMatch />} />
         </Route>

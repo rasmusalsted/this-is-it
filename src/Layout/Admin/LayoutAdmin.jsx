@@ -7,6 +7,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 // Få adgang til LoginContext
 import { LoginContext } from '../../Context/LoginContext'
+import BackToTopBtn from '../../Helpers/BackToTopBtn'
 
 
 const LayoutAdmin = () => {
@@ -27,7 +28,7 @@ const LayoutAdmin = () => {
       <main>
         <Outlet />
       </main>
-
+      <BackToTopBtn/>
       <FooterAdmin />
 
     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
+import BackToTopBtn from '../Helpers/BackToTopBtn'
 
 
 const Layout = () => {
@@ -15,7 +16,7 @@ const Layout = () => {
             <main>
                 <Outlet />
             </main>
-
+            <BackToTopBtn/>
             <Footer />
 
         </div>
