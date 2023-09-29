@@ -21,17 +21,16 @@ const LayoutAdmin = () => {
 
   return (
     
-    <div>
+    <>
 
       <NavbarAdmin />
-      
-      <main>
+      <>
         <Outlet />
-      </main>
+      </>
       <BackToTopBtn/>
       <FooterAdmin />
 
-    </div>
+    </>
   )
 }
 

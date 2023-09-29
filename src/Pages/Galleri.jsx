@@ -13,9 +13,9 @@ const Galleri = () => {
       <GalleryHero/>
       </header>
       <main>
-        <figure>
+        <section>
       <LightboxGallery/>
-        </figure>
+        </section>
       </main>
       
     </>

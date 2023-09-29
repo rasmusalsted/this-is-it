@@ -64,9 +64,9 @@ const LightboxGallery = () => {
         <div className='bg-[var(--gray)]'>
 
             <div className='max-w-[1400px] md:h-[800px] h-[580px] w-full m-auto py-16 px-4 relative group'>
-                <div className='w-full h-full duration-500 bg-center bg-cover rounded-2xl'
+                <figure className='w-full h-full duration-500 bg-center bg-cover rounded-2xl'
                     style={{ backgroundImage: `url(${slides[currentIndex].url})` }}>
-                </div>
+                </figure>
                 {/* Left Arrow*/}
                 <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full group-hover:bg-black/20  text-white cursor-pointer p-2'>
                     <BsChevronCompactLeft onClick={prevSlide} size={30} />

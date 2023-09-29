@@ -73,7 +73,7 @@ const HeroImageSlider = () => {
                             {data.map((item) => (
 
                                 <SwiperSlide>
-                                    <header key={item._id} className='w-full h-full'>
+                                    <div key={item._id} className='w-full h-full'>
                                         <img className='object-cover w-full h-full' alt='månen' src={'http://localhost:4444/images/banner/' + item.image} />
                                         <div className='absolute top-0 flex flex-col justify-center w-full h-full mx-4 items-left'>
                                             <div className='md:ml-[297px]'>
@@ -83,7 +83,7 @@ const HeroImageSlider = () => {
                                                 <h1 className='z-40 text-3xl font-normal text-white lg:text-7xl animate__animated animate__fadeInUp'>{newHeading(item.content)}</h1>
                                             </div>
                                         </div>
-                                    </header>
+                                    </div>
                                 </SwiperSlide>
 
                             ))}

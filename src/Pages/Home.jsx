@@ -18,17 +18,24 @@ const Home = () => {
   return (
 
     <>
-    
+
       <header>
         <HeroImageSlider />
       </header>
+
       <main>
-        <OurTours />
+        <section>
+          <OurTours />
+        </section>
         <article>
           <AboutUs />
         </article>
-        <OurTeam />
-        <Newsletter />
+        <section>
+          <OurTeam />
+        </section>
+        <section>
+          <Newsletter />
+        </section>
       </main>
 
     </>
