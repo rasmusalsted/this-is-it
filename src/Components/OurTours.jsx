@@ -14,7 +14,7 @@ const OurTours = () => {
 
         <div className='bg-[var(--gray)]'>
 
-            <div className='flex m-auto py-16 max-w-[1280px] mt-[-110px] relative z-40'>
+            <div className='flex m-auto py-16 max-w-[1280px] md:mt-[-110px]  relative z-40'>
 
                 <div className='grid grid-cols-1 gap-10 m-auto md:grid-cols-2'>
 

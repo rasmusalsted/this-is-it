@@ -7,9 +7,6 @@ import Error from '../Helpers/Error';
 import Loading from '../Helpers/Loading';
 import useAxios from '../Helpers/useAxios';
 
-//Assets
-import Space from "../Assets/banner-spaceship.jpg"
-
 
 const WhyUs = () => {
 

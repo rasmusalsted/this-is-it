@@ -13,6 +13,7 @@
 
 }
 
+/* HTML */
 @layer base {
   html {
     @apply scroll-smooth;
@@ -31,14 +32,6 @@
   button {
     @apply px-7 py-4 bg-[var(--green)] text-white;
   }
-
-
-
-
-  /*   button:hover {
-    @apply bg-transparent text-[var(--safety-orange-blaze-orange)] duration-200;
-  }
- */
 
 
   h1 {
@@ -60,6 +53,7 @@ a.active {
   @apply border-t-2 border-[var(--green)] bg-slate-200/20;
 }
 
+/* Clippy CSS */
 .overlaybox {
   clip-path: polygon(61% 23%, 100% 14%, 100% 100%, 0 100%, 0 0);
 }
@@ -90,7 +84,6 @@ a.active {
   height: 600px;
 }
 
-
 .swiper-pagination-bullet-active,
 .swiper-pagination-bullet {
   background-color: #01B3A7 !important;
@@ -103,12 +96,7 @@ a.active {
 
 
 
-.breadcrumbs .crumb .active {
-  padding: 1px;
-}
-
 /* LOADING ANIMATION */
-
 .spinner {
   min-height: 275px;
 }
@@ -163,94 +151,7 @@ a.active {
   width: 1px !important;
 }
 
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active.accordion {
-  background-color: #ccc;
-}
-
-.accordion:hover {
-  background-color: #6d8ca0;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  display: none;
-  overflow: hidden;
-  padding: 0 18px;
-  background-color: white;
-}
-
-article.active .panel {
-  display: block;
-}
-
-
-
-
-/* Background Styles Only */
-
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-* {
-  font-family: Raleway;
-}
-
-.side-links {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.side-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: white;
-  width: 180px;
-  padding: 10px 0;
-  border-radius: 10px;
-}
-
-.side-link-youtube {
-  background-color: red;
-}
-
-.side-link-twitter {
-  background-color: #1DA1F2;
-}
-
-.side-link-github {
-  background-color: #6e5494;
-}
-
-.side-link-text {
-  margin-left: 10px;
-  font-size: 18px;
-}
-
-.side-link-icon {
-  color: white;
-  font-size: 30px;
-}
-
 /* Hero img animation */
-
 .animate__animated.animate__heartBeat  {
   --animate-duration: 90s;
 }

@@ -39,7 +39,7 @@ const ContactHero = ({ coord }) => {
 
 
                         <div className='z-0'>
-                            <LeafletMap coord={[56, 10]} popupinfo={"Du kan finde os her: <br> " + data?.address + " " + data?.zipcity} />
+                            <LeafletMap coord={[56, 10]} popupinfo={"Du kan finde os her: <br> " + data?.address } />
                         </div>
                         
                         <ContactForm />
