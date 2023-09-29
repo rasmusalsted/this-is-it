@@ -14,7 +14,7 @@ const Navbar2 = () => {
   let Links = [
     { name: "Hjem", link: "/" },
     { name: "Rumfærgen", link: "/Rumfærgen" },
-    { name: "Ture", link: "/Ture" },
+    { name: "Ture", link: "/Ture", },
     { name: "Galleri", link: "/Galleri" },
     { name: "Sikkerhed", link: "/Sikkerhed" },
     { name: "Kontakt", link: "/Kontakt" },
@@ -61,7 +61,7 @@ const Navbar2 = () => {
             <ul className='pt-8'>
               {
                 Links.map((link) => (
-                  <NavLink key={link.name}> onClick={handleNav} to={link.link}
+                  <NavLink key={link.name} onClick={handleNav} to={link.link}>
                     <li>
                       <p className='p-4 hover:text-white hover:bg-[var(--green)]'>{link.name}</p>
                     </li>
@@ -105,6 +105,7 @@ const Navbar2 = () => {
             <a className='px-2 text-white' ><BiLogoGooglePlus size={25} /></a>
             <a className='px-2 text-white' ><BiLogoInstagram size={25} /></a>
           </div>
+
         </div>
 
       </div>

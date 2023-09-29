@@ -39,7 +39,7 @@ const TureLinks = () => {
                         <div key={item._id} className=''>
                             
                             <Link to={"Ture/" + item._id}>
-                                <p className='p-1'>{item.destination}</p>
+                                <p className='p-1 hover:text-[var(--green)] transition duration-300 ease-in-out cursor-pointer'>{item.destination}</p>
                             </Link>
 
                         </div>
