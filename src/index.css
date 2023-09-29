@@ -24,8 +24,12 @@
 
   }
 
-  a {
+ /*  a {
     @apply hover:text-[var(--green)] transition duration-300 ease-in-out
+  } */
+
+  .some{
+    @apply hover:text-[var(--green)] transition duration-300 ease-in-out cursor-pointer px-2
   }
 
 

@@ -15,6 +15,7 @@ import Newsletter from '../Components/Newsletter'
 
 
 const Home = () => {
+  
   return (
 
     <>

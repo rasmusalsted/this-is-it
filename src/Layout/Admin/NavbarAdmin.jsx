@@ -49,16 +49,16 @@ const Navbar2 = () => {
           }
         >
           <div className='flex justify-center pb-6 border-b-2 border-[var(--gray)]'>
-            <a className='px-2' href=""><BiLogoFacebook size={25} /></a>
-            <a className='px-2' href=""><BiLogoTwitter size={25} /></a>
-            <a className='px-2' href=""><BiLogoGooglePlus size={25} /></a>
-            <a className='px-2' href=""><BiLogoInstagram size={25} /></a>
+            <div className='some'><BiLogoFacebook size={25} /></div>
+            <div className='some'><BiLogoTwitter size={25} /></div>
+            <div className='some'><BiLogoGooglePlus size={25} /></div>
+            <div className='some'><BiLogoInstagram size={25} /></div>
           </div>
           <ul className='pt-8'>
             {
               Links.map((link) => (
-                <NavLink to={link.link}>
-                  <li key={link.name}>
+                <NavLink to={link.link} key={link.name}>
+                  <li>
                     <p className='p-4 hover:text-white hover:bg-[var(--green)]'>{link.name}</p>
                   </li>
                 </NavLink>
@@ -88,10 +88,10 @@ const Navbar2 = () => {
 
 
           <div className='flex-row hidden p-4 lg:flex'>
-            <a className='px-2 text-white' href=""><BiLogoFacebook size={25} /></a>
-            <a className='px-2 text-white' href=""><BiLogoTwitter size={25} /></a>
-            <a className='px-2 text-white' href=""><BiLogoGooglePlus size={25} /></a>
-            <a className='px-2 text-white' href=""><BiLogoInstagram size={25} /></a>
+            <div className='text-white some'><BiLogoFacebook size={25} /></div>
+            <div className='text-white some'><BiLogoTwitter size={25} /></div>
+            <div className='text-white some'><BiLogoGooglePlus size={25} /></div>
+            <div className='text-white some'><BiLogoInstagram size={25} /></div>
           </div>
 
         </div>

@@ -68,7 +68,7 @@ const Destination = () => {
                                 before:transition-all
             
                                 hover:before:opacity-100 hover:after:opacity-100'
-                                
+
                                 data-tip="Ud af 5 stjerner!"
                             >
                                 {
@@ -79,7 +79,7 @@ const Destination = () => {
                             </div>
                         </div>
 
-                        <p className='mb-8'>{parser(data.content)}</p>
+                        <div className='mb-8'>{parser(data.content)}</div>
 
 
 
@@ -94,10 +94,10 @@ const Destination = () => {
                         </div>
 
                         <div className='flex justify-center pt-8 text-black md:justify-start'>
-                            <a className='px-2' href=""><BiLogoFacebook size={25} /></a>
-                            <a className='px-2' href=""><BiLogoTwitter size={25} /></a>
-                            <a className='px-2' href=""><BiLogoGooglePlus size={25} /></a>
-                            <a className='px-2' href=""><BiLogoInstagram size={25} /></a>
+                            <div className='some'><BiLogoFacebook size={25} /></div>
+                            <div className='some'><BiLogoTwitter size={25} /></div>
+                            <div className='some'><BiLogoGooglePlus size={25} /></div>
+                            <div className='some'><BiLogoInstagram size={25} /></div>
                         </div>
 
                         <div className='absolute top-0 right-0 z-40 pricetag bg-[var(--green)] p-2 text-white'>

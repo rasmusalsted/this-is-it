@@ -52,7 +52,7 @@ const WhyUs = () => {
                                     <p className="relative z-10 border-t-2 border-[#01b3a7] w-[310px]"></p>
                                     <p className="absolute inset-0 border-t-2 border-[#F3F3F3] w-full"></p>
                                 </div>
-                                <p className=''>{parser(data.content)}</p>
+                                <div className=''>{parser(data.content)}</div>
                             </div>
 
                         </div>

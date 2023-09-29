@@ -1,7 +1,6 @@
 
 import { useEffect } from 'react'
-import { BsFillTelephoneFill } from "react-icons/bs"
-import { MdEmail, MdLocationOn } from "react-icons/md"
+
 
 //components
 import LeafletMap from './LeafletMap';

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
-import parser from 'html-react-parser';
+
 
 //Icons
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';

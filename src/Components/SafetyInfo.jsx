@@ -55,7 +55,7 @@ const SafetyInfo = () => {
                             <div className='self-center text-center md:text-left '>
                                 <h2 className='mb-4 text-5xl text-gray-300'>Hvorfor vælge os</h2>
                                 <p className='py-1 my-4 md:my-0 text-xl  uppercase border-y-2 text-[var(--green)] border-[var(--green)] md:border-none'>{data.title}</p>
-                                <p className=''>{parser(data.content)}</p>
+                                <div className=''>{parser(data.content)}</div>
                             </div>
 
                         </div>

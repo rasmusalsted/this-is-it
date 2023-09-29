@@ -48,7 +48,7 @@ const AboutUs = () => {
                             <p className="relative z-10 border-t-2 border-[#01b3a7] w-[310px]"></p>
                             <p className="absolute inset-0 border-t-2 border-[#F3F3F3] w-full"></p>
                         </div>
-                        <p className='mb-8 '>{parser(data.content)}</p>
+                        <div className='mb-8 '>{parser(data.content)}</div>
                         <div className=''>
                             <Link to="/Kontakt"><button className='duration-200 border-2 hover:text-black hover:bg-transparent hover:border-2-transparent'>Kontakt os</button></Link>
                         </div>

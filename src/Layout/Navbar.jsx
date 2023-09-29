@@ -14,9 +14,7 @@ const Navbar2 = () => {
   let Links = [
     { name: "Hjem", link: "/" },
     { name: "Rumfærgen", link: "/Rumfærgen" },
-    { name: "Ture", link: "/Ture", childs: [{ name: "Måne", link: "/" }, { name: "Mars", link: "/" }] },
-    /*  { name: "Måne", link: "/Ture", parent: "Ture" },
-        { name: "Mars", link: "/Ture", parent: "Ture" }, */
+    { name: "Ture", link: "/Ture" },
     { name: "Galleri", link: "/Galleri" },
     { name: "Sikkerhed", link: "/Sikkerhed" },
     { name: "Kontakt", link: "/Kontakt" },
@@ -55,16 +53,16 @@ const Navbar2 = () => {
             }
           >
             <div className='flex justify-center pb-6 border-b-2 border-[var(--gray)]'>
-              <a className='px-2' href=""><BiLogoFacebook size={25} /></a>
-              <a className='px-2' href=""><BiLogoTwitter size={25} /></a>
-              <a className='px-2' href=""><BiLogoGooglePlus size={25} /></a>
-              <a className='px-2' href=""><BiLogoInstagram size={25} /></a>
+              <div className='some'><BiLogoFacebook size={25} /></div>
+              <div className='some'><BiLogoTwitter size={25} /></div>
+              <div className='some'><BiLogoGooglePlus size={25} /></div>
+              <div className='some'><BiLogoInstagram size={25} /></div>
             </div>
             <ul className='pt-8'>
               {
                 Links.map((link) => (
-                  <NavLink onClick={handleNav} to={link.link}>
-                    <li key={link.name}>
+                  <NavLink key={link.name}> onClick={handleNav} to={link.link}
+                    <li>
                       <p className='p-4 hover:text-white hover:bg-[var(--green)]'>{link.name}</p>
                     </li>
                   </NavLink>
@@ -102,12 +100,11 @@ const Navbar2 = () => {
 
 
           <div className='flex-row hidden p-4 lg:flex'>
-            <a className='px-2 text-white' href=""><BiLogoFacebook size={25} /></a>
-            <a className='px-2 text-white' href=""><BiLogoTwitter size={25} /></a>
-            <a className='px-2 text-white' href=""><BiLogoGooglePlus size={25} /></a>
-            <a className='px-2 text-white' href=""><BiLogoInstagram size={25} /></a>
+            <a className='px-2 text-white' ><BiLogoFacebook size={25} /></a>
+            <a className='px-2 text-white' ><BiLogoTwitter size={25} /></a>
+            <a className='px-2 text-white' ><BiLogoGooglePlus size={25} /></a>
+            <a className='px-2 text-white' ><BiLogoInstagram size={25} /></a>
           </div>
-
         </div>
 
       </div>

@@ -72,8 +72,8 @@ const HeroImageSlider = () => {
 
                             {data.map((item) => (
 
-                                <SwiperSlide>
-                                    <div key={item._id} className='w-full h-full'>
+                                <SwiperSlide key={item._id}>
+                                    <div className='w-full h-full'>
                                         <img className='object-cover w-full h-full' alt='månen' src={'http://localhost:4444/images/banner/' + item.image} />
                                         <div className='absolute top-0 flex flex-col justify-center w-full h-full mx-4 items-left'>
                                             <div className='md:ml-[297px]'>

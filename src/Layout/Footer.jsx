@@ -55,9 +55,9 @@ const Footer = () => {
                         <div className='flex flex-col mb-16'>
                             <h5 className='mb-10 text-xl text-center uppercase md:text-left'>kontakt</h5>
                             <div className='m-auto'>
-                                <a href=""><p className='flex flex-row items-center mb-4 hover:text-[var(--green)]'><BiSolidPhone size={20} color='01B3A7' className='mr-4' /> {data?.phone}</p></a>
-                                <a href=""><p className='flex flex-row items-center mb-4 hover:text-[var(--green)]'><MdMail size={20} color='01B3A7' className='mr-4' /> {data?.email}</p></a>
-                                <a href=""><p className='flex flex-row items-center hover:text-[var(--green)]'><FaLocationArrow size={20} color='01B3A7' className='mr-4' /> {data?.address}</p></a>
+                                <p className=' some flex flex-row items-center mb-4 hover:text-[var(--green)]'><BiSolidPhone size={20} color='01B3A7' className='mr-4' /> {data?.phone}</p>
+                                <p className=' some flex flex-row items-center mb-4 hover:text-[var(--green)]'><MdMail size={20} color='01B3A7' className='mr-4' /> {data?.email}</p>
+                                <p className='some flex flex-row items-center hover:text-[var(--green)]'><FaLocationArrow size={20} color='01B3A7' className='mr-4' /> {data?.address}</p>
                             </div>
                             <NewsExit/>
                         </div>
@@ -68,8 +68,8 @@ const Footer = () => {
                                 <ul className='flex flex-wrap justify-around md:justify-normal max-w-[300px]'>
                                     {
                                         Links.map((link) => (
-                                            <Link to={link.link}>
-                                                <li className='hover:text-[var(--green)]' key={link.name}>
+                                            <Link key={link.name} to={link.link}>
+                                                <li className='hover:text-[var(--green)]'>
                                                     <p className='flex items-center pr-6'><BiSolidCircle size={15} className='pr-2' color='01B3A7' /> {link.name}</p>
                                                 </li>
                                             </Link>
@@ -96,10 +96,10 @@ const Footer = () => {
                     </div>
 
                     <div className='flex justify-center'>
-                        <a className='px-2' href=""><BiLogoFacebook size={25} /></a>
-                        <a className='px-2' href=""><BiLogoTwitter size={25} /></a>
-                        <a className='px-2' href=""><BiLogoGooglePlus size={25} /></a>
-                        <a className='px-2' href=""><BiLogoInstagram size={25} /></a>
+                        <div className='some'><BiLogoFacebook size={25} /></div>
+                        <div className='some'><BiLogoTwitter size={25} /></div>
+                        <div className='some'><BiLogoGooglePlus size={25} /></div>
+                        <div className='some'><BiLogoInstagram size={25} /></div>
                     </div>
                     
                 </div>
