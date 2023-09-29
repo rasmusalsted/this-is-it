@@ -42,7 +42,7 @@ const OurTours = () => {
             </div>
 
             <div className='pb-16 text-center'>
-                <Link to="/Ture"><p>Vores ture →</p></Link>
+                <Link to="/Ture"><p className='some'>Vores ture →</p></Link>
             </div>
 
         </div>

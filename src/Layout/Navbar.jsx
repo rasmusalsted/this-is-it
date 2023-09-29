@@ -100,10 +100,10 @@ const Navbar2 = () => {
 
 
           <div className='flex-row hidden p-4 lg:flex'>
-            <a className='px-2 text-white' ><BiLogoFacebook size={25} /></a>
-            <a className='px-2 text-white' ><BiLogoTwitter size={25} /></a>
-            <a className='px-2 text-white' ><BiLogoGooglePlus size={25} /></a>
-            <a className='px-2 text-white' ><BiLogoInstagram size={25} /></a>
+            <div className='text-white some'><BiLogoFacebook size={25} /></div>
+            <div className='text-white some'><BiLogoTwitter size={25} /></div>
+            <div className='text-white some'><BiLogoGooglePlus size={25} /></div>
+            <div className='text-white some'><BiLogoInstagram size={25} /></div>
           </div>
 
         </div>
